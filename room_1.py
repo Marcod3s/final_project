@@ -1,6 +1,7 @@
 import character as ch
 def stage_1(character):
     print(f"{character.username} is now in Stage 1")
+    input("")
 
 def stage_2(character):
     print(f"{character.username}Stage 2 ")

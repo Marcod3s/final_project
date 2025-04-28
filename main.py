@@ -12,11 +12,12 @@ user_pick = input("what class do you want to be?")
 
 main_character = ch.character(username, char_classes[user_pick][0], char_classes[user_pick][1], user_pick)
 
-# for char_class in char_classes:
-#     if char_class == user_pick:
-#         user_character = ch.character('test', char_classes[user_pick][0], char_classes[user_pick][1], user_pick)
+for char_class in char_classes:
+    if char_class == user_pick:
+        user_character = ch.character('test', char_classes[user_pick][0], char_classes[user_pick][1], user_pick)
 
 print(main_character)
+
 
 # user_class = False
 # #while not user_class:
