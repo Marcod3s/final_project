@@ -18,3 +18,5 @@ class character:
 
 #inventory goes into the character class
 
+def add_strikes(self, strikes):
+    self.strikes = strikes
