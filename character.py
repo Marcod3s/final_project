@@ -4,11 +4,12 @@
 
 
 class character:
-    def __init__(self, username, health, inventory, user_class):
+    def __init__(self, username, health, inventory, user_class,magic,physical,attacks):
         self.username = username
         self.health = health
         self.inventory = inventory
         self.user_class = user_class
+        self.attacks = attacks
 
     def __str__(self):
         return f"{self.username}'s health is {self.health} and my bag has {self.inventory} in it."
@@ -18,5 +19,3 @@ class character:
 
 #inventory goes into the character class
 
-def add_strikes(self, strikes):
-    self.strikes = strikes

@@ -1,4 +1,4 @@
-import character as ch, room_1 as r1
+import character as ch, room_1 as r1,room_2 as r2, secret_room as sr
 
 char_classes = {
     'Barbarian': [150, (['sword', 10], ['mead', 20])],
@@ -26,5 +26,9 @@ print(main_character)
 # #beginning the game
 #
 #
-# r1.stage_1(character)
+r1.stage_1(ch.character)
+r1.stage_2(ch.character)
+r2.stage_1(ch.character)
+r2.stage_2(ch.character)
+
 
