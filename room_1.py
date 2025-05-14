@@ -10,7 +10,8 @@ def stage_1(character):
 
     # Intro
     print(
-        "Welcome to Stage 1 of Barrage and Danger, in this stage you must compplete 3 riddles and you will lose health\n each time you grt the answer inccorect.\n Let's see of you make it past the first stage >:)")
+        "Welcome to Stage 1 of Barrage and Danger, in this stage you must compplete 3 riddles and you will lose health\n each time you grt the answer inccorect."
+        "\n Let's see of you make it past the first stage >:)")
 
     solved = False
     # Health = 100
@@ -83,6 +84,7 @@ def stage_2(character):
         elif user_choice.lower() == "Freeze attack":
             print(f"{character.username} used Freeze Attack!\n It Did {Dice_atk} dmg!")
             monster.health -= {Dice_atk}
+
 
     # Fight loop starts
     # focus on this for now while loop working and damage being randomized if character rolls even they attack

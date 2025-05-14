@@ -1,4 +1,6 @@
-import character as ch, room_1 as r1,room_2 as r2, secret_room as sr
+import character as ch
+import room_1 as r1
+import room_2 as r2
 
 char_classes = {
     'Barbarian': [150, (['sword', 10], ['mead', 20])],
@@ -8,15 +10,16 @@ char_classes = {
 #print statements welcoming the user
 
 username = input("Enter your username: ")
-user_pick = input("what class do you want to be?")
+character = ch.character(username, 30, [])
+# user_pick = input("what class do you want to be?")
+#
+# main_character = ch.character(username, char_classes[user_pick][0], char_classes[user_pick][1], user_pick)
+#
+# for char_class in char_classes:
+#     if char_class == user_pick:
+#         user_character = ch.character('test', char_classes[user_pick][0], char_classes[user_pick][1], user_pick)
 
-main_character = ch.character(username, char_classes[user_pick][0], char_classes[user_pick][1], user_pick)
-
-for char_class in char_classes:
-    if char_class == user_pick:
-        user_character = ch.character('test', char_classes[user_pick][0], char_classes[user_pick][1], user_pick)
-
-print(main_character)
+print(character)
 
 
 # user_class = False
