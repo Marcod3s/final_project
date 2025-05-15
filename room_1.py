@@ -1,43 +1,31 @@
 import character as ch
 import random
+import riddles
+
+ridl_solv = False
 
 
 def stage_1(character):
-    print(f"{character.username} is now in Stage 1")
-    input("")
+    print(f"{character.username} is now in Room 1, Stage 1")
 
     # Stage 1 is being called
 
     # Intro
     print(
-        "Welcome to Stage 1 of Barrage and Danger, in this stage you must compplete 3 riddles and you will lose health\n each time you grt the answer inccorect."
+        "Welcome to Stage 1 of Barrage and Danger, in this stage you must compplete 3 riddles and you will lose "
+        "health\n each time you grt the answer incorrect."
         "\n Let's see of you make it past the first stage >:)")
 
-    solved = False
-    # Health = 100
+    riddles.np()
 
-    # def riddle():
-    #     answer = input("xxx").lower()
-    #     return answer == "xxx"
-    #
-    # while not solved:
-    #     if riddle():
-    #         solved = True
-    #         print("You are worthy enough to move on!")
-    #     else:
-    #         Health = Health - 10
-    #     print(f"You have % {Health} left. ")
-    # if Health == 0:
-    #     print("You're disqualified")
-    #     exit()
     # First Boss Fight
     print("Now that you have passed this level it is now time to fight your first boss")
 
 
 def stage_2(character):
-    print(f"{character.username}Stage 2 ")
+    print(f"{character.username} is now in Room 1, Stage 2 ")
 
-    monster = ch.character("Beast of Bones", 50)
+    monster = ch.character("Beast of Bones", 50, [])
 
     # Insert dice into player's inventory if possible
     Attacks = ["Sword attack", "Spin Kick", "The force", "Fire ball", "Freeze Attack"]
@@ -84,7 +72,6 @@ def stage_2(character):
         elif user_choice.lower() == "Freeze attack":
             print(f"{character.username} used Freeze Attack!\n It Did {Dice_atk} dmg!")
             monster.health -= {Dice_atk}
-
 
     # Fight loop starts
     # focus on this for now while loop working and damage being randomized if character rolls even they attack

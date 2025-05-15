@@ -12,7 +12,3 @@ class character:
     def __str__(self):
         return f"{self.username}'s health is {self.health} and my bag has {self.inventory} in it."
 
-    def character_class_sel(self):
-        user_name = input("")
-
-# inventory goes into the character class
