@@ -89,6 +89,6 @@ def stage_2(character):
             print(f"{character.username} used Freeze Attack!\n It Did {Dice_atk} dmg!")
             monster.health -= {Dice_atk}
 
-    # Fight loop starts
+    #Fight loop starts
     # focus on this for now while loop working and damage being randomized if character rolls even they attack
     turn = 1
