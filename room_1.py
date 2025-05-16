@@ -1,8 +1,6 @@
 import character as ch
 import random
-import riddles
-
-ridl_solv = False
+import riddles as r
 
 
 def stage_1(character):
@@ -12,11 +10,28 @@ def stage_1(character):
 
     # Intro
     print(
-        "Welcome to Stage 1 of Barrage and Danger, in this stage you must compplete 3 riddles and you will lose "
-        "health\n each time you grt the answer incorrect."
-        "\n Let's see of you make it past the first stage >:)")
+        "Welcome to Stage 1 of Barrage and Danger, in this stage you must complete 3 riddles and you will lose "
+        "health\n each time you get the answer incorrect."
+        "\n Let's see if you make it past the first stage >:)")
 
-    riddles.np()
+    # riddles.np()
+    np = random.choice(r.all_riddles)
+    print(np)
+
+    user_answer = input("What is the answer to my riddle?")
+    np.check_answer(user_answer)
+
+    np = random.choice(r.all_riddles)
+    print(np)
+
+    user_answer = input("What is the answer to my riddle?")
+    np.check_answer(user_answer)
+
+    np = random.choice(r.all_riddles)
+    print(np)
+
+    user_answer = input("What is the answer to my riddle?")
+    np.check_answer(user_answer)
 
     # First Boss Fight
     print("Now that you have passed this level it is now time to fight your first boss")
@@ -25,10 +40,11 @@ def stage_1(character):
 def stage_2(character):
     print(f"{character.username} is now in Room 1, Stage 2 ")
 
-    monster = ch.character("Beast of Bones", 50, [])
+    monster = ch.character("Beast of Bones", 70, [])
 
     # Insert dice into player's inventory if possible
-    Attacks = ["Sword attack", "Spin Kick", "The force", "Fire ball", "Freeze Attack"]
+    #Attacks = ["1.Sword attack", "2.Spin Kick", "3.The force", "4.Fire ball", "5.Freeze Attack"]
+
     Dice_atk = random.randint(1, 10)
     # print(f"you did {Dice_num} damage")
     user_choice = input("Choose your attack")

@@ -13,12 +13,12 @@ class riddle:
         while user_answer != self.answer:
 
             if self.answer == user_answer:
-                print("Correct!\n Good Job!")
+                print("Correct!\n On to the next...")
+                all_riddles.pop()
             else:
-                print("Incorrect")
+                print("Incorrect, try again >:(")
+                user_answer = input("What is the answer to my riddle?\n")
 
-
-# np = riddle("What is black and white and read all over?", "A newspaper")
 
 all_riddles = [riddle(
     "I am taken from a mine, and shut up in a wooden case, from which I am never released, and yet I am used by "
@@ -39,8 +39,3 @@ all_riddles = [riddle(
         "The person who makes it, sell it. The person who buys it never uses it, The person who uses it "
         "never knows they're using it. What is it?",
         "A coffin")]
-
-np = random.choice(all_riddles)
-print(np)
-user_answer = input("What is the answer to my riddle?")
-np.check_answer(user_answer)
