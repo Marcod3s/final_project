@@ -12,3 +12,5 @@ class character:
     def __str__(self):
         return f"{self.username}'s health is {self.health}"
 
+    def add_health(self, amt):
+        self.health += amt

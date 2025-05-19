@@ -17,21 +17,23 @@ def stage_1(character):
     # riddles.np()
     np = random.choice(r.all_riddles)
     print(np)
-
     user_answer = input("What is the answer to my riddle?")
     np.check_answer(user_answer)
+    # if user_answer != np.answer:
+    #     character.health -= 3
+    # print(f"You now have {character.health}")
 
     np = random.choice(r.all_riddles)
     print(np)
-
     user_answer = input("What is the answer to my riddle?")
     np.check_answer(user_answer)
+    print(f"You now have {character.health}")
 
     np = random.choice(r.all_riddles)
     print(np)
-
     user_answer = input("What is the answer to my riddle?")
     np.check_answer(user_answer)
+    print(f"You now have {character.health}")
 
     # First Boss Fight
     print("Now that you have passed this level it is now time to fight your first boss")
@@ -40,7 +42,7 @@ def stage_1(character):
 def stage_2(character):
     print(f"{character.username} is now in Room 1, Stage 2 ")
 
-    monster = ch.character("Beast of Bones", 70,)
+    monster = ch.character("Beast of Bones", 70, )
     print(f"There is a boss in this stage {monster}")
     print("Because this is your first boss fight let me teach you how things go..\n"
           "There is a 1 in 2 chance you get to attack\n"
@@ -56,12 +58,12 @@ def stage_2(character):
         if dice_roll % 2 == 0:
             print("It's currently now your turn")
             print(
-                  "You have been given a series of attacks listed for you\n "
-                  "1.Sword attack\n"
-                  "2.Spin kick\n "
-                  "3.The force\n"
-                  "4.Fire ball\n "
-                  "5.Freeze attack\n ")
+                "You have been given a series of attacks listed for you\n "
+                "1.Sword attack\n"
+                "2.Spin kick\n "
+                "3.The force\n"
+                "4.Fire ball\n "
+                "5.Freeze attack\n ")
 
             atk_choice = int(input("Choose your attack"))
             if atk_choice == 1:
@@ -87,8 +89,6 @@ def stage_2(character):
 
         else:
             print("The Beast of Bones attacked you")
-            character.health -= dice_atk/2
-            print(f"The Beast of Bones did {dice_atk/2} damage! \n"
+            character.health -= dice_atk / 2
+            print(f"The Beast of Bones did {dice_atk / 2} damage! \n"
                   f"you now have {character.health} health")
-
-

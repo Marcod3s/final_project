@@ -1,4 +1,6 @@
 import random
+import character as ch
+import main
 
 
 class riddle:
@@ -9,14 +11,15 @@ class riddle:
     def __str__(self):
         return self.question
 
-    def check_answer(self, user_answer, ):
+    def check_answer(self, user_answer, user_char):
         while user_answer != self.answer:
 
             if self.answer == user_answer:
                 print("Correct!\n On to the next...")
-                all_riddles.pop()
+
             else:
                 print("Incorrect, try again >:(")
+                user_char.add_health(-5)
                 user_answer = input("What is the answer to my riddle?\n")
 
 
@@ -39,3 +42,5 @@ all_riddles = [riddle(
         "The person who makes it, sell it. The person who buys it never uses it, The person who uses it "
         "never knows they're using it. What is it?",
         "A coffin")]
+
+np = random.choice(all_riddles)

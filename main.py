@@ -9,14 +9,14 @@ import riddles as r
 
 if __name__ == '__main__':
     username = input("Enter your username: ")
-    character = ch.character(username, 30,)
+    user = ch.character(username, 30,)
 
-    print(character)
+    print(user)
 
-    r1.stage_1(character)
+    r1.stage_1(user)
 
-    r1.stage_2(character)
+    r1.stage_2(user)
 
-    r2.stage_1(character)
+    r2.stage_1(user)
 
-    r2.stage_2(character)
+    r2.stage_2(user)
