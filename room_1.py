@@ -40,55 +40,55 @@ def stage_1(character):
 def stage_2(character):
     print(f"{character.username} is now in Room 1, Stage 2 ")
 
-    monster = ch.character("Beast of Bones", 70, [])
-
-    # Insert dice into player's inventory if possible
-    #Attacks = ["1.Sword attack", "2.Spin Kick", "3.The force", "4.Fire ball", "5.Freeze Attack"]
-
-    Dice_atk = random.randint(1, 10)
+    monster = ch.character("Beast of Bones", 70,)
+    print(f"There is a boss in this stage {monster}")
+    print("Because this is your first boss fight let me teach you how things go..\n"
+          "There is a 1 in 2 chance you get to attack\n"
+          "Furthermore because you're new here your attacks have randomized damage value from 5dmg-10dmg")
     # print(f"you did {Dice_num} damage")
-    user_choice = input("Choose your attack")
 
-    while character.health < 0 and monster.health < 0:
+    # Fight loop starts
+
+    while character.health > 0 and monster.health > 0:
+        print("Depending on what number you get determines the amount of damage you will deal.")
+        dice_atk = random.randint(5, 10)
         dice_roll = random.randint(1, 10)
         if dice_roll % 2 == 0:
+            print("It's currently now your turn")
             print(
-            )
-            atk_choice = int(input(
-                "You have been given a series of attacks listed for you\n 1.Sword attack\n 2.Spin kick\n 3.The force\n "
-                "4.Fire ball\n 5.Freeze attack\n You will br given dice to roll. "
-                "Depending on what number you get determines the amount of damage you will deal."))
+                  "You have been given a series of attacks listed for you\n "
+                  "1.Sword attack\n"
+                  "2.Spin kick\n "
+                  "3.The force\n"
+                  "4.Fire ball\n "
+                  "5.Freeze attack\n ")
 
+            atk_choice = int(input("Choose your attack"))
+            if atk_choice == 1:
+                print(f"{character.username} used Sword Attack!\n It Did {dice_atk} dmg!")
+                monster.health -= dice_atk
+                print(f"The Beast of Bones currently has {monster.health} health")
+            elif atk_choice == 2:
+                print(f"{character.username} used Spin Kick!\n It Did {dice_atk} dmg!")
+                monster.health -= dice_atk
+                print(f"The Beast of Bones currently has {monster.health} health")
+            elif atk_choice == 3:
+                print(f"{character.username} used The Force!\n It Did {dice_atk} dmg!")
+                monster.health -= dice_atk
+                print(f"The Beast of Bones currently has {monster.health} health")
+            elif atk_choice == 4:
+                print(f"{character.username} used Fire ball!\n It Did {dice_atk} dmg!")
+                monster.health -= dice_atk
+                print(f"The Beast of Bones currently has {monster.health} health")
+            elif atk_choice == 5:
+                print(f"{character.username} used Freeze Attack!\n It Did {dice_atk} dmg!")
+                monster.health -= dice_atk
+                print(f"The Beast of Bones currently has {monster.health} health")
 
         else:
-            print("Monster attacked you")
-            character.health -= {Dice_atk}
-            print(f"Monster did {Dice_atk} damage")
+            print("The Beast of Bones attacked you")
+            character.health -= dice_atk/2
+            print(f"The Beast of Bones did {dice_atk/2} damage! \n"
+                  f"you now have {character.health} health")
 
-        print(character.health)
-        print(monster.health)
-        # print(f"Turn{turn}")
-        u_flag = input("Ready to take your risk?")
-        if u_flag.lower == "y" or "yes":
-            print("Roll the dice")
-            # Dice_num = random.randint(1, 9)
 
-        if user_choice.lower() == "Sword Attack":
-            print(f"{character.username} used Sword Attack!\n It Did {Dice_atk} dmg!")
-            monster.health -= {Dice_atk}
-        elif user_choice.lower() == "Spin kick":
-            print(f"{character.username} used Spin Kick!\n It Did {Dice_atk} dmg!")
-            monster.health -= {Dice_atk}
-        elif user_choice.lower() == "The force":
-            print(f"{character.username} used The Force!\n It Did {Dice_atk} dmg!")
-            monster.health -= {Dice_atk}
-        elif user_choice.lower() == "Fire ball":
-            print(f"{character.username} used Fire ball!\n It Did {Dice_atk} dmg!")
-            monster.health -= {Dice_atk}
-        elif user_choice.lower() == "Freeze attack":
-            print(f"{character.username} used Freeze Attack!\n It Did {Dice_atk} dmg!")
-            monster.health -= {Dice_atk}
-
-    #Fight loop starts
-    # focus on this for now while loop working and damage being randomized if character rolls even they attack
-    turn = 1

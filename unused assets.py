@@ -52,3 +52,10 @@
 #
 # print(char_classes['Barbarian'][1])
 
+# print(character.health)
+# print(monster.health)
+# # print(f"Turn{turn}")
+# u_flag = input("Ready to take your risk?")
+# if u_flag.lower == "y" or "yes":
+#     print("Roll the dice")
+
