@@ -47,3 +47,4 @@ all_riddles = [riddle(
         "A coffin", ch.character)]
 
 np = random.choice(all_riddles)
+
