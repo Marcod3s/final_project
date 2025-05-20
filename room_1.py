@@ -18,7 +18,7 @@ def stage_1(character):
     np = random.choice(r.all_riddles)
     print(np)
     user_answer = input("What is the answer to my riddle?")
-    np.check_answer(user_answer)
+    np.check_answer(user_answer, character)
     # if user_answer != np.answer:
     #     character.health -= 3
     # print(f"You now have {character.health}")
@@ -26,13 +26,13 @@ def stage_1(character):
     np = random.choice(r.all_riddles)
     print(np)
     user_answer = input("What is the answer to my riddle?")
-    np.check_answer(user_answer)
+    np.check_answer(user_answer, character)
     print(f"You now have {character.health}")
 
     np = random.choice(r.all_riddles)
     print(np)
     user_answer = input("What is the answer to my riddle?")
-    np.check_answer(user_answer)
+    np.check_answer(user_answer, character)
     print(f"You now have {character.health}")
 
     # First Boss Fight
@@ -68,27 +68,31 @@ def stage_2(character):
             atk_choice = int(input("Choose your attack"))
             if atk_choice == 1:
                 print(f"{character.username} used Sword Attack!\n It Did {dice_atk} dmg!")
-                monster.health -= dice_atk
+                monster.add_health(dice_atk)
                 print(f"The Beast of Bones currently has {monster.health} health")
+
             elif atk_choice == 2:
                 print(f"{character.username} used Spin Kick!\n It Did {dice_atk} dmg!")
-                monster.health -= dice_atk
+                monster.add_health(dice_atk)
                 print(f"The Beast of Bones currently has {monster.health} health")
+
             elif atk_choice == 3:
                 print(f"{character.username} used The Force!\n It Did {dice_atk} dmg!")
-                monster.health -= dice_atk
+                monster.add_health(dice_atk)
                 print(f"The Beast of Bones currently has {monster.health} health")
+
             elif atk_choice == 4:
                 print(f"{character.username} used Fire ball!\n It Did {dice_atk} dmg!")
-                monster.health -= dice_atk
+                monster.add_health(dice_atk)
                 print(f"The Beast of Bones currently has {monster.health} health")
+
             elif atk_choice == 5:
                 print(f"{character.username} used Freeze Attack!\n It Did {dice_atk} dmg!")
-                monster.health -= dice_atk
+                monster.add_health(dice_atk)
                 print(f"The Beast of Bones currently has {monster.health} health")
 
         else:
             print("The Beast of Bones attacked you")
-            character.health -= dice_atk / 2
+            character.add_health(dice_atk/2)
             print(f"The Beast of Bones did {dice_atk / 2} damage! \n"
                   f"you now have {character.health} health")
