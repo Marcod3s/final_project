@@ -65,6 +65,8 @@ def stage_2(character):
                 print(f"{character.username} used Freeze Attack!\n It Did {dice_atk} dmg!")
                 monster2.add_health(-dice_atk)
                 print(f"The Beast of Bones currently has {monster2.health} health")
+            else:
+                print("That is not a valid option!")
 
         else:
             print("The Beast of Bones attacked you")

@@ -84,7 +84,7 @@ def stage_2(character):
                 "5.Freeze Attack\n")
 
             atk_choice = input("Choose your attack")
-            if atk_choice == 1 or atk_choice == "Sword Attack":
+            if atk_choice == "1" or atk_choice == "Sword Attack":
                 time.sleep(1)
                 print(f"{character.username} used Sword Attack!\n It Did {dice_atk} dmg!")
                 monster.add_health(-dice_atk)
@@ -104,7 +104,7 @@ def stage_2(character):
                 print(f"{character.username} used Fire ball!\n It Did {dice_atk} dmg!")
                 monster.add_health(-dice_atk)
 
-            elif atk_choice == 5 or "Freeze Attack":
+            elif atk_choice == 5 or atk_choice == "Freeze Attack":
                 time.sleep(1)
                 print(f"{character.username} used Freeze Attack!\n It Did {dice_atk} dmg!")
                 monster.add_health(-dice_atk)
@@ -113,7 +113,6 @@ def stage_2(character):
                 time.sleep(1)
                 print(f"{character.username} did something wrong and "
                       f"forfeited their chance at an attack.")
-                return
         else:
             print("The Beast of Bones attacked you")
             time.sleep(1)

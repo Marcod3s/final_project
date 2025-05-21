@@ -16,7 +16,7 @@ class riddle:
     def check_answer(self, user_answer, user_char):
         while user_answer != self.answer:
 
-            if self.answer == user_answer.lower() or self.answer == user_answer():
+            if self.answer == user_answer.lower() or self.answer == user_answer:
                 time.sleep(1)
                 return user_answer.lower()
             else:
