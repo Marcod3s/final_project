@@ -2,7 +2,7 @@
 
 
 class character:
-    def __init__(self, username, health,):
+    def __init__(self, username, health):
         self.username = username
         self.health = health
         #self.inventory = inventory
