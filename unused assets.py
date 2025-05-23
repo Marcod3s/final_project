@@ -59,3 +59,6 @@
 # if u_flag.lower == "y" or "yes":
 #     print("Roll the dice")
 
+# self.user_class = user_class
+        # self.attacks = attacks
+# class for user including stats and such

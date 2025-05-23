@@ -49,7 +49,13 @@ all_riddles = [riddle(
     riddle(
         "The person who makes it, sell it. The person who buys it never uses it, The person who uses it "
         "never knows they're using it. What is it?",
-        "a coffin", ch.character)]
+        "a coffin", ch.character),
+    riddle("What goes on four legs in the morning, two legs at noon, and three in the evening?",
+           "a person", ch.character),
+    riddle("There is a house one enters it blind, the other enters it seeing. "
+           "What is it?", "a school", ch.character),
+    riddle("I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I? ",
+           "an echo", ch.character) ]
 
 np = random.choice(all_riddles)
 
