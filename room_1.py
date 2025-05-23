@@ -57,7 +57,7 @@ def stage_2(character):
           "There is a 1 in 2 chance you get to attack\n")
     time.sleep(2)
     print("Furthermore, because you're new here your attacks "
-          "have randomized damage value from 5dmg-10dmg for now")
+          "have randomized damage value from 7dmg-12dmg for now")
     time.sleep(2)
     print("Depending on what number you get determines the amount of damage you will deal.")
     # print(f"you did {Dice_num} damage")
@@ -65,10 +65,8 @@ def stage_2(character):
     # Fight loop starts
 
     while character.health > 0 and monster.health > 0:
-        if character.health <= 0:
-            print("Game over...")
-            exit()
-        dice_atk = random.randint(5, 10)
+
+        dice_atk = random.randint(7, 12)
         dice_roll = random.randint(1, 10)
         if dice_roll % 2 == 0:
             print(f"The Beast of Bones currently has {monster.health} health")
@@ -89,22 +87,22 @@ def stage_2(character):
                 print(f"{character.username} used Sword Attack!\n It Did {dice_atk} dmg!")
                 monster.add_health(-dice_atk)
 
-            elif atk_choice == 2 or atk_choice == "Spin Kick":
+            elif atk_choice == "2" or atk_choice == "Spin Kick":
                 time.sleep(1)
                 print(f"{character.username} used Spin Kick!\n It Did {dice_atk} dmg!")
                 monster.add_health(-dice_atk)
 
-            elif atk_choice == 3 or atk_choice == "The Force":
+            elif atk_choice == "3" or atk_choice == "The Force":
                 time.sleep(1)
                 print(f"{character.username} used The Force!\n It Did {dice_atk} dmg!")
                 monster.add_health(-dice_atk)
 
-            elif atk_choice == 4 or atk_choice == "Fire Ball":
+            elif atk_choice == "4" or atk_choice == "Fire Ball":
                 time.sleep(1)
                 print(f"{character.username} used Fire ball!\n It Did {dice_atk} dmg!")
                 monster.add_health(-dice_atk)
 
-            elif atk_choice == 5 or atk_choice == "Freeze Attack":
+            elif atk_choice == "5" or atk_choice == "Freeze Attack":
                 time.sleep(1)
                 print(f"{character.username} used Freeze Attack!\n It Did {dice_atk} dmg!")
                 monster.add_health(-dice_atk)
@@ -121,3 +119,6 @@ def stage_2(character):
             print(f"The Beast of Bones did {dice_atk / 2} damage! \n")
             time.sleep(1)
             print(f"you now have {character.health} health")
+            if character.health <= 0:
+                print("Game over...")
+                exit()

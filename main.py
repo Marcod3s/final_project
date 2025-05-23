@@ -9,7 +9,7 @@ import riddles as r
 
 if __name__ == '__main__':
     username = input("Enter your username: ")
-    user = ch.character(username, 30,)
+    user = ch.character(username, 35,)
 
     print(user)
 
